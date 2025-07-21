@@ -34,7 +34,7 @@ Evaluation Metrics:
 Precision and Recall: Evaluate the model’s accuracy in correctly identifying diseased plants.
 AUC (Area Under Curve): Measures the model’s class distinction capability.
 Top K Categorical Accuracy: Tracks whether the correct label appears among the top predictions, useful for difficult-to-classify images.
-Model Summary: The Functional API enables a detailed, flexible architecture, viewable with model.summary() for an overview of the model’s layers, shapes, and parameters.
+Model Summary: The Functional API provides a detailed and flexible architecture, which can be viewed using model.summary() for an overview of the model’s layers, shapes, and parameters.
 6. Model Training
 Callbacks:
 Early Stopping: Monitors validation loss to prevent overfitting by halting training if no improvements occur.
@@ -60,19 +60,19 @@ Preprocessing: Loads, resizes, and normalizes a single image to match the model'
 Prediction Output: Displays class probabilities, highlighting the class with the highest predicted probability.
 Batch Testing:
 Directory Scanning: Loads and preprocesses images from a test directory.
-Qualitative Assessment: Visualizes predictions alongside actual labels to gauge model accuracy qualitatively.
-10. Visualization
+Qualitative Assessment: Visualises predictions alongside actual labels to gauge model accuracy qualitatively.
+10. Visualisation
 Training History: Plots training and validation accuracy and loss across epochs to visualize learning patterns and diagnose overfitting.
 Sample Predictions: Displays predicted labels and true labels for individual test images, allowing for visual confirmation of model predictions.
 11. Conclusion
-Model Effectiveness: The CNN architecture, created with the Functional API, performs well in identifying plant diseases, with promising accuracy and precision scores.
+Model Effectiveness: The CNN architecture, developed using the Functional API, demonstrates excellent performance in identifying plant diseases, achieving promising accuracy and precision scores.
 Recommendations for Improvement:
 Model Tuning: Experiment with deeper or transfer learning-based architectures for potentially higher accuracy.
 
 
 MIT License
 
-Copyright (c) [Year] [Your Name]
+Copyright (c) [2024] [Ayodele Akinpelumi]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
