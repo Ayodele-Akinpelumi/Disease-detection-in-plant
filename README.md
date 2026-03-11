@@ -1,29 +1,29 @@
 Plant Disease Recognition - Documentation
 1. Introduction
 Objective: To develop a deep learning model to accurately recognize and classify plant diseases from leaf images, supporting early diagnosis for improved crop health.
-Data Source: The dataset is sourced from Kaggle, which contains images labelled by disease type for various plant species.
+Data Source: The dataset was sourced from Kaggle, which contains images labelled by disease type for various plant species.
 2. Requirements and Dependencies
 Dependencies:
 TensorFlow: Used for model creation, training, and evaluation.
 NumPy: Manages array operations, essential for image processing.
-Matplotlib: For visualization of training progress, sample predictions, and evaluation metrics.
-Pandas: Optional for handling any tabular data in preprocessing.
-Setup: Ensure all dependencies are installed to avoid compatibility issues when running the notebook.
+Matplotlib/Seaborn: For visualization of training progress, sample predictions, and evaluation metrics.
+Pandas: for handling any tabular data in preprocessing.
+Setup: all dependencies were installed to avoid compatibility issues while running the notebook.
 3. Data Preprocessing
 Training Data:
 Path Setup: Specifies the directory containing training images, with subdirectories for each disease category.
-Image Generator: Uses tf.keras.utils.image_dataset_from_directory to batch load and preprocess images with specified parameters (e.g., image size, batch size, shuffling).
+Image Generator: Uses tf.keras.utils.image_dataset_from_directory to batch load and preprocess images with specified parameters which include the image size, the batch size, the shuffling.
 Label Mapping: Automatically assigns labels based on the directory structure, supporting multi-class classification.
 Validation Data:
-Configured similarly to the training data, ensuring uniformity in dimensions and batch sizes for consistent evaluation.
+   This was Configured similarly to the training data, to ensure uniformity in dimensions and batch sizes for consistent evaluation.
 Dataset Performance Optimization:
 Prefetching: Configures the dataset to use AUTOTUNE for optimized loading, allowing data to be processed while the model is training, reducing delays.
 4. Model Architecture
-Architecture Type: A Convolutional Neural Network (CNN) designed using the Functional API, chosen over the Sequential model to allow for flexibility and complex connections (e.g., skip connections, branching layers).
+Architecture Type: A Convolutional Neural Network (CNN) designed using the Functional API, chosen over the Sequential model to allow for flexibility and complex connections.
 Layers:
-Convolutional Layers: Extract features such as textures and edges that help differentiate disease types.
-Pooling Layers: Downsample feature maps, reducing dimensions and computation.
-Regularization Layers: Applies techniques like dropout and batch normalization to reduce overfitting and improve generalization.
+Convolutional Layers: These Extract features such as textures and edges that help differentiate disease types.
+Pooling Layers: It Downsamples feature maps, reducing dimensions and computation.
+Regularization Layers: This Applies techniques like dropout and batch normalization to reduce overfitting and improve generalization.
 Dense Layers: Fully connected layers integrate learned features for the final classification.
 Output Layer: Softmax activation produces probabilities for each disease class, enabling multi-class predictions.
 Model Function: create_optimized_cnn(input_shape, num_classes): Constructs and returns the CNN using the Functional API, enhancing the model's adaptability to changes in input shape or architecture.
@@ -33,7 +33,7 @@ Optimizer: Adam optimizer for efficient and adaptive gradient updates.
 Evaluation Metrics:
 Precision and Recall: Evaluate the model’s accuracy in correctly identifying diseased plants.
 AUC (Area Under Curve): Measures the model’s class distinction capability.
-Top K Categorical Accuracy: Tracks whether the correct label appears among the top predictions, useful for difficult-to-classify images.
+Top K Categorical Accuracy: This Tracks whether the correct label appears among the top predictions, useful for difficult-to-classify images.
 Model Summary: The Functional API provides a detailed and flexible architecture, which can be viewed using model.summary() for an overview of the model’s layers, shapes, and parameters.
 6. Model Training
 Callbacks:
@@ -84,11 +84,5 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+
 
